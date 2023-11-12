@@ -1,0 +1,124 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    margin: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: #3498db;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.book-icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: #3498db;
+}
+
+a {
+    text-decoration: none;
+    color: #3498db;
+}
+
+form {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+input {
+    width: calc(100% - 20px);
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.error-message {
+    color: #e74c3c;
+}
+
+.add-book-link {
+    display: inline-block;
+    background-color: #3498db;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.actions {
+    display: flex;
+}
+
+.action-button {
+    color: #fff;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.action-button:hover {
+    transform: scale(1.05);
+}
+
+.edit-button {
+    background-color: #2ecc71;
+}
+
+.delete-button {
+    background-color: #e74c3c;
+}
+
+.action-button i {
+    margin-right: 8px;
+}
+

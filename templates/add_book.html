@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+    <title>Neues Buch hinzufügen</title>
+</head>
+<body>
+    <h1>Neues Buch hinzufügen</h1>
+    <form action="{{ url_for('add') }}" method="post">
+        <label for="title">Titel:</label>
+        <input type="text" id="title" name="title" required>
+        <label for="author">Autor:</label>
+        <input type="text" id="author" name="author" required>
+        <button type="submit">Buch hinzufügen</button>
+    </form>
+    <a href="{{ url_for('index') }}">Zurück zur Buchliste</a>
+</body>
+</html>

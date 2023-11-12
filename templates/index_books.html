@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <title>Bibliotek-Manager</title>
+</head>
+<body>
+ <div class="container">
+    <h1>Bibliotek-Manager</h1>
+        <ul>
+            {% for book in books %}
+                <li>
+                    <span style="margin-right: 20px" class="book-title">{{ book['title'] }}</span>
+                    <span class="book-title">{{ book['author'] }}</span>
+                    <div class="actions">
+                        <a href="{{ url_for('edit', book_id=book['id']) }}" class="action-button edit-button">
+                            <i class="fas fa-edit"></i> Bearbeiten
+                        </a>
+                        <a href="{{ url_for('delete', book_id=book['id']) }}" class="action-button delete-button">
+                            <i class="fas fa-trash-alt"></i> Löschen
+                        </a>
+                    </div>
+                    <i class="fas fa-book book-icon"></i>
+                </li>
+            {% endfor %}
+        </ul>
+    <a href="{{ url_for('add') }}" class="add-book-link">
+        <i class="fas fa-plus"></i> Neues Buch hinzufügen
+    </a>
+      </div>
+</body>
+</html>
